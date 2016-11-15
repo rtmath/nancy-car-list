@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Show Cars</title>
+  </head>
+  <body>
+    <ul>
+      @foreach(var car in Model)
+       {
+         <li>@car.GetMakeModel()</li>
+         <li>@car.GetPrice()</li>
+         <li>@car.GetMiles()</li>
+       }
+    </ul>
+  </body>
+</html>
