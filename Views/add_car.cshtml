@@ -5,7 +5,7 @@
     <title>Add Car</title>
   </head>
   <body>
-    <form action="/car_added" method="post">
+    <form action="/" method="post">
      <label for="car-model">Add a new  car model</label>
      <input id="car-model" name="car-model" type="text">
 
@@ -16,5 +16,13 @@
      <input id="car-mileage" name="car-mileage" type="text">
      <button type="submit">Submit</button>
    </form>
+   <ul>
+     @foreach(var car in Model)
+      {
+        <li>@car.GetMakeModel()</li>
+        <li>@car.GetPrice()</li>
+        <li>@car.GetMiles()</li>
+      }
+   </ul>
   </body>
 </html>
